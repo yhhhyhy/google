@@ -25,7 +25,7 @@ jobs:
       uses: android-actions/setup-android@v2
 
     # 确保REPO_OS_OVERRIDE环境变量设置正确
-    - run: echo "REPO_OS_OVERRIDE=linux" >> $GITHUB_ENV
+    - run: unset REPO_OS_OVERRIDE
 
     # 更新Android SDK和工具
     - name: Update Android SDK Tools
