@@ -20,11 +20,11 @@ jobs:
 
     - name: Update Android SDK Tools
       run: |
-        echo "y" | $ANDROID_HOME/tools/bin/sdkmanager --add-modules java.xml.bind --update
+        echo "y" | $ANDROID_HOME/tools/bin/sdkmanager --update
 
     - name: Download Google Play Services Image
       run: |
-        echo "y" | $ANDROID_HOME/tools/bin/sdkmanager --add-modules java.xml.bind --install "system-images;android-29;google_apis_playstore;x86_64"
+        echo "y" | $ANDROID_HOME/tools/bin/sdkmanager --install "system-images;android-29;google_apis_playstore;x86_64"
 
     - name: Start Android Emulator
       uses: reactivecircus/android-emulator-runner@v2
